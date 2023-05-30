@@ -1,0 +1,112 @@
+@use "../variables.scss" as *;
+
+.scroll{
+    display: flex;
+    flex-flow: row nowrap;
+    gap:1rem;
+    overflow-x:scroll;
+    align-items: center;
+    max-width:78%;
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .active{
+        background-color: black;
+        color: white;
+       }
+    
+    div{
+        flex-shrink:0;
+        padding:5px;
+        font-size: $fs-20;
+        font-weight: $fw-20;
+        white-space: nowrap;
+        background-color:whitesmoke; 
+        border-radius:5px;
+         cursor: pointer;
+    }
+    
+}
+.hero-section{
+ display: flex;
+ flex-flow: row wrap;
+ gap: 5px;
+ margin-top:5rem;
+ justify-content: space-between;
+ .video-cart{
+flex-shrink: 1;
+ }
+
+.image{
+    width:350px; 
+    height:200px;
+    border-radius: 15px;
+
+} 
+    video{
+        width: 350px;
+        height: 200px;
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+    }
+    .video-cart{
+        position: relative;
+    }
+    .img-title{
+        display: flex;
+        flex-flow: row nowrap;
+        gap:10px;
+        margin-top:0.5rem;
+
+        h3{
+            white-space:wrap;
+            font-size:$fs-30;
+            font-weight: $fw-30;
+            max-width:18rem;
+        }
+    }
+}
+.tv-title{
+    font-size: $fs-20;
+    font-weight: $fw-20;
+}
+.tv-views{
+    span{
+        font-size: $fs-10;
+        font-weight: $fw-10;
+    }
+}
+.video-cart{
+    margin-bottom: 2rem;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 12%;
+    z-index:1;
+    background-color: white;
+    padding-block:1rem;
+    min-height:10%;
+
+    }
+    
+
+#angle-right{
+ margin-left: 5px;
+ position: relative;
+ z-index: 2;
+ font-size:1.3rem;
+ font-weight: 100;
+ 
+}
+#angle-left{
+   
+   @extend #angle-right
+   
+}
